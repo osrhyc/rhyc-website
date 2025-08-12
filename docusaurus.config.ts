@@ -54,10 +54,10 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'daliy', // 第一个 daliy 实例
-        path: path.resolve(__dirname, 'content/docs/daliy'),
-        routeBasePath: 'daliy', // URL: /daliy
-        sidebarPath: path.resolve(__dirname, 'content/docs/daliy/sidebars.ts'),
+        id: 'daily', // 第一个 daily 实例
+        path: path.resolve(__dirname, 'content/docs/daily'),
+        routeBasePath: 'daily', // URL: /daily
+        sidebarPath: path.resolve(__dirname, 'content/docs/daily/sidebars.ts'),
       },
     ],
     [
@@ -151,7 +151,7 @@ const config: Config = {
         src: 'img/logo.png',
       },
       items: [
-        { to: '/daliy/intro', label: '每日一题', position: 'left' },
+        { to: '/daily/start', label: '每日一题', position: 'left' },
         { to: '/guides/intro', label: '指南', position: 'left' },
         { to: '/tutorials/intro', label: '教程', position: 'left' },
         { to: '/blog', label: '随笔', position: 'left' },

@@ -1,8 +1,8 @@
 ---
-id: daliy-js-deep-vs-shallow-copy           # 文档唯一 ID（不写时会用文件名自动生成）
+id: daily-js-deep-vs-shallow-copy           # 文档唯一 ID（不写时会用文件名自动生成）
 title: 深入理解 JS 深拷贝与浅拷贝           # 页面标题
-slug: /daliy/js-deep-vs-shallow-copy   # 页面路径（默认根据文件名生成，可自定义）
-sidebar_label: 001-深入理解 JS 深拷贝与浅拷贝      # 侧边栏显示的名字
+slug: /daily/js-deep-vs-shallow-copy   # 页面路径（默认根据文件名生成，可自定义）
+sidebar_label: 002-深入理解 JS 深拷贝与浅拷贝      # 侧边栏显示的名字
 sidebar_position: 2        # 在侧边栏中的排序（数字越小越靠前）
 description: 本文介绍了新功能的使用方法  # SEO 描述
 tags: [feature, update]    # 标签
