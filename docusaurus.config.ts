@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import path from 'path';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -54,34 +55,34 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'daliy', // 第一个 daliy 实例
-        path: 'daliy',
+        path: path.resolve(__dirname, 'content/docs/daliy'),
         routeBasePath: 'daliy', // URL: /daliy
-        sidebarPath: require.resolve('./sidebars.js'),
+        sidebarPath: path.resolve(__dirname, 'content/docs/daliy/sidebars.ts'),
       },
     ],
     [
       '@docusaurus/plugin-content-docs',
       {
         id: 'guides', // 第二个 docs 实例
-        path: 'guides',
+        path: path.resolve(__dirname, 'content/docs/guides'),
         routeBasePath: 'guides', // URL: /guides
-        sidebarPath: require.resolve('./sidebars-guides.js'),
+        sidebarPath: path.resolve(__dirname, 'content/docs/guides/sidebars.ts'),
       },
     ],
     [
       '@docusaurus/plugin-content-docs',
       {
         id: 'tutorials', // 第三个 docs 实例
-        path: 'tutorials',
+        path: path.resolve(__dirname, 'content/docs/tutorials'),
         routeBasePath: 'tutorials', // URL: /tutorials
-        sidebarPath: require.resolve('./sidebars-tutorials.js'),
+        sidebarPath: path.resolve(__dirname, 'content/docs/tutorials/sidebars.ts'),
       },
     ],
     [
       '@docusaurus/plugin-content-blog',
       {
         id: 'blog',
-        path: 'blog',
+        path: path.resolve(__dirname, 'content/blogs/blog'),
         routeBasePath: 'blog',
         blogTitle: '技术随笔',
         blogDescription: '日常技术记录与思考',
@@ -102,7 +103,7 @@ const config: Config = {
       '@docusaurus/plugin-content-blog',
       {
         id: 'weekly',
-        path: 'weekly',
+        path: path.resolve(__dirname, 'content/blogs/weekly'),
         routeBasePath: 'weekly',
         blogTitle: '前端周刊',
         blogDescription: '每周精选：资讯/最佳实践/开源项目',
@@ -122,7 +123,7 @@ const config: Config = {
       '@docusaurus/plugin-content-blog',
       {
         id: 'news',
-        path: 'news',
+        path: path.resolve(__dirname, 'content/blogs/news'),
         routeBasePath: 'news',
         blogTitle: '社区动态',
         blogDescription: '版本发布、活动通知',
