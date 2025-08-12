@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'osrhyc',
-  tagline: '探索前端技术与编程艺术',
+  title: 'yuda',
+  tagline: 'Beyond Code',
   favicon: 'img/logo.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -22,8 +22,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'rhyc', // Usually your GitHub org/user name.
-  projectName: 'rhyc', // Usually your repo name.
+  organizationName: 'yuda', // Usually your GitHub org/user name.
+  projectName: 'yuda', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -40,28 +40,8 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        docs: false,
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -69,23 +49,113 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'daliy', // 第一个 daliy 实例
+        path: 'daliy',
+        routeBasePath: 'daliy', // URL: /daliy
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'guides', // 第二个 docs 实例
+        path: 'guides',
+        routeBasePath: 'guides', // URL: /guides
+        sidebarPath: require.resolve('./sidebars-guides.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'tutorials', // 第三个 docs 实例
+        path: 'tutorials',
+        routeBasePath: 'tutorials', // URL: /tutorials
+        sidebarPath: require.resolve('./sidebars-tutorials.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'blog',
+        path: 'blog',
+        routeBasePath: 'blog',
+        blogTitle: '技术随笔',
+        blogDescription: '日常技术记录与思考',
+        showReadingTime: true,
+        postsPerPage: 20,
+        blogSidebarCount: 'ALL',
+        blogSidebarTitle: '全部文章',
+        feedOptions: {
+          type: ['rss', 'atom'],
+          xslt: true,
+          title: '技术随笔 RSS',
+        },
+        // 可选：authors.yaml/yml
+        authorsMapPath: 'authors.yml',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'weekly',
+        path: 'weekly',
+        routeBasePath: 'weekly',
+        blogTitle: '前端周刊',
+        blogDescription: '每周精选：资讯/最佳实践/开源项目',
+        showReadingTime: true,
+        postsPerPage: 20,
+        blogSidebarCount: 'ALL',
+        blogSidebarTitle: '全部文章',
+        feedOptions: {
+          type: ['rss', 'atom'],
+          xslt: true,
+          title: '前端周刊 RSS',
+        },
+        authorsMapPath: 'authors.yml',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'news',
+        path: 'news',
+        routeBasePath: 'news',
+        blogTitle: '社区动态',
+        blogDescription: '版本发布、活动通知',
+        showReadingTime: true,
+        postsPerPage: 20,
+        blogSidebarCount: 'ALL',
+        blogSidebarTitle: '全部文章',
+        feedOptions: {
+          type: ['rss', 'atom'],
+          xslt: true,
+          title: '社区动态 RSS',
+        },
+        authorsMapPath: 'authors.yml',
+      },
+    ],
+  ],   
+
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/yuda-social-card.png',
     navbar: {
-      title: 'rhyc',
+      title: 'yuda',
       logo: {
         alt: 'logo',
         src: 'img/logo.png',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'docs',
-        },
-        {to: '/blog', label: 'blog', position: 'left'},
+        { to: '/daliy/intro', label: '每日一题', position: 'left' },
+        { to: '/guides/intro', label: '指南', position: 'left' },
+        { to: '/tutorials/intro', label: '教程', position: 'left' },
+        { to: '/blog', label: '随笔', position: 'left' },
+        { to: '/weekly', label: '周刊', position: 'left' },
+        { to: '/news', label: '动态', position: 'left' },
         {
           href: 'https://github.com/osrhyc',
           label: 'GitHub',

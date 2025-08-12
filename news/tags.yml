@@ -1,0 +1,14 @@
+facebook:
+  label: Facebook
+  permalink: /facebook
+  description: Facebook tag description
+
+面试题:
+  label: 面试题
+  permalink: /面试题
+  description: 面试题 tag description
+
+daily:
+  label: 每日一题
+  permalink: /daily
+  description: 每日一题

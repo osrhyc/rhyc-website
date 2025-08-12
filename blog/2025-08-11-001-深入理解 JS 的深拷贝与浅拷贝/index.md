@@ -1,11 +1,12 @@
 ---
 title: 001-深入理解 JS 深拷贝与浅拷贝
 description: 面试必问的 JS 基础题，5 分钟掌握深拷贝与浅拷贝的核心知识点。
-slug: /daily/js-deep-vs-shallow-copy
+slug: js-deep-vs-shallow-copy
 authors: yuda
 tags: [daily]
 ---
 
+![header](./001.png)
 在 JavaScript 中，拷贝主要分两类：
 
 ### 浅拷贝（Shallow Copy）
@@ -88,3 +89,4 @@ const deepCopy = _.cloneDeep(obj);
 - JSON 序列化法会丢失特殊类型（Date、RegExp、函数等）
 - 递归要注意循环引用
 - structuredClone 是未来趋势，但注意兼容性
+  
