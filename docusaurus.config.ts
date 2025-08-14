@@ -61,30 +61,12 @@ const config: Config = {
       },
     ],
     [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'guides', // 第二个 docs 实例
-        path: path.resolve(__dirname, 'content/docs/guides'),
-        routeBasePath: 'guides', // URL: /guides
-        sidebarPath: path.resolve(__dirname, 'content/docs/guides/sidebars.ts'),
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'tutorials', // 第三个 docs 实例
-        path: path.resolve(__dirname, 'content/docs/tutorials'),
-        routeBasePath: 'tutorials', // URL: /tutorials
-        sidebarPath: path.resolve(__dirname, 'content/docs/tutorials/sidebars.ts'),
-      },
-    ],
-    [
       '@docusaurus/plugin-content-blog',
       {
-        id: 'blog',
-        path: path.resolve(__dirname, 'content/blogs/blog'),
-        routeBasePath: 'blog',
-        blogTitle: '技术随笔',
+        id: 'notes',
+        path: path.resolve(__dirname, 'content/blogs/notes'),
+        routeBasePath: 'notes',
+        blogTitle: '随笔',
         blogDescription: '日常技术记录与思考',
         showReadingTime: true,
         postsPerPage: 20,
@@ -93,49 +75,9 @@ const config: Config = {
         feedOptions: {
           type: ['rss', 'atom'],
           xslt: true,
-          title: '技术随笔 RSS',
+          title: '随笔 RSS',
         },
         // 可选：authors.yaml/yml
-        authorsMapPath: 'authors.yml',
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-blog',
-      {
-        id: 'weekly',
-        path: path.resolve(__dirname, 'content/blogs/weekly'),
-        routeBasePath: 'weekly',
-        blogTitle: '前端周刊',
-        blogDescription: '每周精选：资讯/最佳实践/开源项目',
-        showReadingTime: true,
-        postsPerPage: 20,
-        blogSidebarCount: 'ALL',
-        blogSidebarTitle: '全部文章',
-        feedOptions: {
-          type: ['rss', 'atom'],
-          xslt: true,
-          title: '前端周刊 RSS',
-        },
-        authorsMapPath: 'authors.yml',
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-blog',
-      {
-        id: 'news',
-        path: path.resolve(__dirname, 'content/blogs/news'),
-        routeBasePath: 'news',
-        blogTitle: '社区动态',
-        blogDescription: '版本发布、活动通知',
-        showReadingTime: true,
-        postsPerPage: 20,
-        blogSidebarCount: 'ALL',
-        blogSidebarTitle: '全部文章',
-        feedOptions: {
-          type: ['rss', 'atom'],
-          xslt: true,
-          title: '社区动态 RSS',
-        },
         authorsMapPath: 'authors.yml',
       },
     ],
@@ -152,11 +94,7 @@ const config: Config = {
       },
       items: [
         { to: '/daily/start', label: '每日一题', position: 'left' },
-        { to: '/guides/intro', label: '指南', position: 'left' },
-        { to: '/tutorials/intro', label: '教程', position: 'left' },
-        { to: '/blog', label: '随笔', position: 'left' },
-        { to: '/weekly', label: '周刊', position: 'left' },
-        { to: '/news', label: '动态', position: 'left' },
+        { to: '/notes', label: '随笔', position: 'left' },
         {
           href: 'https://github.com/osrhyc',
           label: 'GitHub',
