@@ -1,7 +1,13 @@
 ---
-slug: js-deep-vs-shallow-copy
-authors: yuda
-tags: [daily]
+title: 博客图片素材怎么找    # 文章标题（必填）
+date: 2025-08-11                      # 发布时间（YYYY-MM-DD 或 ISO 格式）
+slug: blogAssetSearch               # 自定义文章路径（默认用文件名生成）
+authors: yuda                         # 作者 ID（需在 authors.yml 定义）
+tags: [blog]        # 文章标签，用于标签页聚合和 SEO
+description: 博客图片素材怎么找  # SEO 描述
+image: /img/blog/deep-copy.png             # 封面图（用于文章顶部和社交分享）
+keywords: [blog,writer]     # SEO 关键词
+draft: false                               # 草稿模式，true 时不会出现在生产构建
 ---
 
 
@@ -41,5 +47,3 @@ Freepik 出品，插画可调色、可动效化，非常适合技术文章封面
 - 文章封面：用插画（undraw、storyset），风格统一。
 - 内容示例：代码用 Carbon/Ray.so，数据用 Chart/截图。
 - 避免直接用 Google 随便搜到的图，容易有版权风险。
-
-⸻
