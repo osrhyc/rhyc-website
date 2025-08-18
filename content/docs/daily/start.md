@@ -2,7 +2,7 @@
 id: daily-start          # 文档唯一 ID（不写时会用文件名自动生成）
 title: 每日一题｜开篇说明   # 页面标题
 slug: start   # 页面路径（默认根据文件名生成，可自定义）
-sidebar_label: 001-每日一题｜开篇说明     # 侧边栏显示的名字
+sidebar_label: 每日一题｜开篇说明     # 侧边栏显示的名字
 sidebar_position: 1        # 在侧边栏中的排序（数字越小越靠前）
 description: 每日一题,  # SEO 描述
 tags: [前端,面试]    # 标签

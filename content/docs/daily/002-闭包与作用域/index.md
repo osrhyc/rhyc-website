@@ -2,7 +2,7 @@
 id: daily-js-deep-vs-shallow-copy      # 文档唯一 ID（不写时会用文件名自动生成）
 title: 闭包与作用域          # 页面标题
 slug: /daily/js-closures-and-scopes   # 页面路径（默认根据文件名生成，可自定义）
-sidebar_label: 闭包与作用域  # 侧边栏显示的名字
+sidebar_label: 002-闭包与作用域  # 侧边栏显示的名字
 sidebar_position: 2        # 在侧边栏中的排序（数字越小越靠前）
 description: 闭包与作用域   # SEO 描述
 tags: [js基础,面试]    # 标签
